@@ -10,7 +10,7 @@
     @Detail    :
 '''
 
-# import sys
+import sys
 # import time
 # from PIL import Image, ImageDraw
 # from models.tiny_yolo import TinyYoloNet
@@ -35,11 +35,11 @@ def detect_cv2(cfgfile, weightfile, imgfile):
 
     num_classes = m.num_classes
     if num_classes == 20:
-        namesfile = 'data/voc.names'
+        namesfile = 'yolov4/data/voc.names'
     elif num_classes == 80:
-        namesfile = 'data/coco.names'
+        namesfile = 'yolov4/data/coco.names'
     else:
-        namesfile = 'data/x.names'
+        namesfile = 'yolov4/data/x.names'
     class_names = load_class_names(namesfile)
 
     img = cv2.imread(imgfile)
