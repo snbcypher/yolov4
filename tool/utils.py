@@ -190,8 +190,6 @@ def post_processing(img, conf_thresh, nms_thresh, output):
     max_conf = np.max(confs, axis=2)
     max_id = np.argmax(confs, axis=2)
 
-    t2 = time.time()
-
     bboxes_batch = []
     for i in range(box_array.shape[0]):
        
